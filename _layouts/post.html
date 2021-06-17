@@ -2,16 +2,138 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
+ <!-- begin content -->
+  <main class="content" aria-label="Content">
+    <div class="post-head">
+  <div class="container">
+    <div class="row">
+      
+      
 
-  <div class="entry">
+      
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img class="lazy" data-src="{{ page.image }}" alt="{{ page.title }}">
+        </div>
+      </div>
+      
+
+      
+      
+      
+      <div class="col col-6 col-d-12">
+        <div class="post__info ">
+  
+          
+            <div class="post__tags">
+              
+                <a href="/tags#travel" class="post__tag">travel</a>
+              
+                <a href="/tags#hobby" class="post__tag">hobby</a>
+              
+                <a href="/tags#notes" class="post__tag">notes</a>
+              
+            </div>
+          
+  
+          <h1 class="post__title">{{ page.title }}</h1>
+  
+          <div class="post__meta">
+            <a href="/about/" class="post__author-image">
+              <img class="lazy" data-src="https://yt3.ggpht.com/QL3ZdxDPrriki_pVmlsuXFWyJ1mqJizy4XMA76J0vdgUv99R47xtbU69yHOAeXa5Mt5ow8k3SSA=s176-c-k-c0x00ffffff-no-rj-mo" alt="CodeWithPranav">
+            </a>
+
+            <div class="post__meta-bottom">
+              <a class="post__author" href="/about/">CodeWithPranav</a>
+              <time class="post__date" datetime="2020-11-07T12:01:35+00:00">{{ page.date | date: "%B %e, %Y" }}</time>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     {{ content }}
+ 
+    
+    
+     <div class="post__share">
+      <ul class="share__list list-reset">
+        <li class="share__item">
+          <a class="share__link share__twitter"
+            href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.baseurl }}{{ page.url }}"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.baseurl }}{{ page.url }}"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url={{ site.baseurl }}{{ page.url }}&amp;media={{ page.image }}&amp;description={{ page.title }}"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
+          rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.baseurl }}{{ page.url }}&title={{ post.content | strip_html | truncatewords: 40 }}&source=CWP"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+        </li>
+      </ul>
+    </div>
+
+
+  </article>
+</div>
+<!-- end post -->
+
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <!-- begin comments -->
+<div class="show-comments">
+  <button class="button disqus-button" id="show-comments-button" onclick="disqus();return false;">Show Comments</button>
+</div>
+
+<div id="disqus_thread" class="post__comments">
+  <div id="disqus_empty"></div>
+</div>
+
+<script>
+  var disqus_loaded = false;
+  var disqus_shortname = 'demo-menca';
+  var disqus_container = document.getElementById("disqus_thread");
+  function disqus() {
+    if (!disqus_loaded) {
+      disqus_loaded = true;
+      var e = document.createElement("script");
+      e.type = "text/javascript";
+      e.async = true;
+      e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0])
+        .appendChild(e);
+      // Hide the button after opening
+      document.getElementById("show-comments-button").style.display = "none";
+      // Show disqus comments
+      disqus_container.classList.add("is-open");
+    }
+  }
+</script>
+
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<!-- end comments --> 
+      </div>
+    </div>
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
-  {% include disqus.html %}
-</article>
+  </main>
+  <!-- end content -->
