@@ -1,0 +1,53 @@
+---
+layout: default
+permalink: /tags/
+title: Tags
+---
+
+
+
+<!-- begin tags -->
+<section class="tags">
+
+  <div class="tag__head">
+
+    <div class="container">
+      <div class="row">
+        <div class="col col-12">
+
+          <h1 class="tag__title">Tags</h1>
+        
+          <ul class="tag__list list-reset">
+            
+            
+            {% for tag in site.tags %}
+            
+              
+                 {% capture tag_name %}{{ tag | first }}{% endcapture %}
+                <li class="tag__item"><a href="#{{ tag_name | slugize }}" class="tag__link">{{ tag_name | slugize }}</a></li>
+               {% endfor %}
+            
+              
+                
+                
+              
+            {% endfor %}
+              
+                
+             
+              
+            
+              
+            
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
