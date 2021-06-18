@@ -47,6 +47,78 @@ title: Tags
   </div>
 
 
+<div class="tags__inner">
+    
+      <div class="container">
+        <div class="row">
+          <div class="col col-12">
+            <div class="tag__info">
+              <div class="tag__info-box">
+                <div class="tag__counter">
+                  <span>3</span>
+                  <small>Posts</small>
+                </div>
+                 {% for tag in site.tags %}
+                {% capture tag_name %}{{ tag | first }}{% endcapture %}
+                <h2 class="tag__name" id="{{ tag_name | slugize }}">{{ tag_name | slugize }}</h2>
+                {% endfor %}
+              </div>
+              <a class="top__link" href="#top">Return to top</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col col-12">
+            <div class="row">
+               {% for tag in site.tags %}
+            {% for post in site.tags[tag_name] %}
+              
+                <div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+
+    <div class="article__head">
+      <time class="article__date" datetime="2020-10-31T12:01:35+00:00">31 Oct 2020</time>
+
+      
+
+      
+      <a class="article__image" href="{{ site.baseurl }}{{ post.url }}">
+        <img class="lazy" data-src="{{ post.image }}" alt="{{ post.title }}">
+      </a>
+      
+
+    </div>
+
+    <div class="article__content">
+
+      <h2 class="article__title">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h2>
+
+      
+      <p class="article__excerpt">{{ post.content | strip_html | truncatewords: 14 }}</p>
+      
+
+    </div>
+  </div>
+</div>
+              
+            {% endfor %}
+              {% endfor %}
+                
+              
+                
+              
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
 
 
