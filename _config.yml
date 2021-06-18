@@ -15,6 +15,16 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 # Flags below are optional
 #
 
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  
+  
+paginate: 1
+paginate_path: "/page:num/"  
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
