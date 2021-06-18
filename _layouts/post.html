@@ -30,9 +30,9 @@ layout: default
              
              
              {% if post %}
-    {% assign tag = post.tags %}
+    {% assign tags = post.tags %}
   {% else %}
-    {% assign tag = page.tags %}
+    {% assign tags = page.tags %}
   {% endif %}
   {% for tag in tags %}
              <a href="{{site.baseurl}}/tags#{{tag|slugize}}" class="post__tag">{{tag}}</a>
