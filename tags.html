@@ -47,27 +47,6 @@ title: Tags
   </div>
 
 
-<div class="tags__inner">
-    
-      <div class="container">
-        <div class="row">
-          <div class="col col-12">
-            <div class="tag__info">
-              <div class="tag__info-box">
-                <div class="tag__counter">
-                  <span>3</span>
-                  <small>Posts</small>
-                </div>
-                 {% for tag in site.tags %}
-                {% capture tag_name %}{{ tag | first }}{% endcapture %}
-                <h2 class="tag__name" id="{{ tag_name | slugize }}">{{ tag_name | slugize }}</h2>
-                {% endfor %}
-              </div>
-              <a class="top__link" href="#top">Return to top</a>
-            </div>
-          </div>
-        </div>
-      </div>
   
   
   
