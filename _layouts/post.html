@@ -26,12 +26,20 @@ layout: default
   
           
             <div class="post__tags">
-              
-                <a href="/tags#travel" class="post__tag">travel</a>
-              
-                <a href="/tags#hobby" class="post__tag">hobby</a>
-              
-                <a href="/tags#notes" class="post__tag">notes</a>
+             
+             
+             
+             {% if post %}
+    {% assign tag = post.tags %}
+  {% else %}
+    {% assign tag = page.tags %}
+  {% endif %}
+  {% for tag in tags %}
+             <a href="{{site.baseurl}}/tags#{{tag|slugize}}" class="post__tag">{{tag}}</a>
+
+  {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+             
               
             </div>
           
