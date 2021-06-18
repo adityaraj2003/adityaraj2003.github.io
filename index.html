@@ -112,15 +112,19 @@ published: true
       
             <div class="pagination__count pagination__item">Page 1 of 2</div>
       
-              {% if paginator.next_page %}
-              <a href="{{ paginator.next_page_path | relative_url }}" class="pagination__next pagination__item">Next <i class="ion ion-ios-arrow-forward"></i></a>
+{% if paginator.previous_page %}
+              <a href="{{ paginator.previous_page_path | relative_url }" class="pagination__next pagination__item">Next <i class="ion ion-ios-arrow-forward"></i></a>
+             
               
-              
-              {% else %}
-                      <span class="pagination__next pagination__item disabled">Next <i class="ion ion-ios-arrow-forward"></i></span>
-                      {% endif %}
+						
+							
+						
+                      {% else %}
+                    
             
-               {% endif %}
+              <span class="pagination__next pagination__item disabled">Next <i class="ion ion-ios-arrow-forward"></i></span>
+           
+                      {% endif %}
               
               
           </div>
