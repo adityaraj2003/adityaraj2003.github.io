@@ -53,7 +53,7 @@ layout: default
 
             <div class="post__meta-bottom">
               <a class="post__author" href="/about/">CodeWithPranav</a>
-              <time class="post__date" datetime="2020-11-07T12:01:35+00:00">{{ page.date | date: "%B %e, %Y" }}</time>
+              <time class="post__date" datetime="{{ post.date }}">{{ page.date | date: "%B %e, %Y" }}</time>
             </div>
           </div>
   
@@ -164,7 +164,7 @@ layout: default
   <div class="article__inner">
 
     <div class="article__head">
-      <time class="article__date" datetime="2020-11-14T12:01:35+00:00">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <time class="article__date" datetime="{{ post.date }}">{{ post.date | date: "%b %-d, %Y" }}</time>
 
       
      
