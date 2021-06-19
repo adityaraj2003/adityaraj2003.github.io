@@ -8,6 +8,7 @@
       "tags" : "{{ post.tags | join: ', ' }}",
       "url"     : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date | date: "%b %-d, %Y" }}",
+      "image"     : "{{ post.image }}",
       "content" : "{{ post.content | strip_html | truncatewords: 40 | escape }}"
 
     } {% unless forloop.last %},{% endunless %}
