@@ -85,7 +85,7 @@ layout: default
 
           <div class="pagination__list">
            
-           {% if page.prev %}
+           {% if post.prev %}
             
               <a href="{{ post.prev }}" class="pagination__prev pagination__item"><i class="ion ion-ios-arrow-back"></i> Prev</a>
             {% else %}
@@ -95,7 +95,7 @@ layout: default
            {% endif %}
            
            
-            {% if page.next %}
+            {% if post.next %}
            
            
               <a href="{{ post.next }}" class="pagination__next pagination__item">Next <i class="ion ion-ios-arrow-forward"></i></a>
