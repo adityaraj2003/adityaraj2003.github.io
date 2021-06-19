@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
     searchInput: document.getElementById("js-search-input"),
     resultsContainer: document.getElementById("js-results-container"),
     json: "/search.json",
-    searchResultTemplate: '<div class="article col col-4 col-d-6 col-t-12 animate"><div class="article__inner"><div class="article__head"> <time class="article__date" datetime="2020-11-14T12:01:35+00:00">{date}</time><div class="video-icon"><div class="circle pulse"></div><div class="circle"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <polygon points="40,30 65,50 40,70"></polygon> </svg></div></div> <a class="article__image" href="{url}"> <img src="/images/02.jpg" alt="{title}"> </a></div><div class="article__content"><h2 class="article__title"> <a href="{url}">{title}</a></h2><p class="article__excerpt">{content}/p></div></div></div>',
+    searchResultTemplate: '<div class="article col col-4 col-d-6 col-t-12 animate"><div class="article__inner"><div class="article__head"> <time class="article__date" datetime="2020-11-14T12:01:35+00:00">{date}</time><div class="video-icon"><div class="circle pulse"></div><div class="circle"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <polygon points="40,30 65,50 40,70"></polygon> </svg></div></div> <a class="article__image" href="{url}"> <img src="{image}" alt="{title}"> </a></div><div class="article__content"><h2 class="article__title"> <a href="{url}">{title}</a></h2><p class="article__excerpt">{content}/p></div></div></div>',
     noResultsText: '<h3 class="no-results">No results found</h3>'
   });
 
