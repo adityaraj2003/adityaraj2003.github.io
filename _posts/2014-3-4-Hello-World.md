@@ -2,7 +2,6 @@
 layout: post
 title: You're up and running!
 image: https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
-tags: [tech, food]
 genres: [action, adventure]
 ---
 
