@@ -18,12 +18,11 @@ title: Genre
           <ul class="tag__list list-reset">
             
             
-            {% for tag in site.tags %}
+            {% for tag in site.genres %}
             
               
-                 {% capture tag_name %}{{ tag | first }}{% endcapture %}
+                  {% capture tag_name %}{{ tag | first }}{% endcapture %}
                 <li class="tag__item"><a href="#{{ tag_name | slugize }}" class="tag__link">{{ tag_name | slugize }}</a></li>
-               
               
                 
                 
