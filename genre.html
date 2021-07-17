@@ -1,0 +1,45 @@
+---
+layout: default
+permalink: /genre/
+title: Genre
+---
+
+<!-- begin tags -->
+<section class="tags">
+
+  <div class="tag__head">
+
+    <div class="container">
+      <div class="row">
+        <div class="col col-12">
+
+          <h1 class="tag__title">Genre</h1>
+        
+          <ul class="tag__list list-reset">
+            
+            
+            {% for tag in site.genres %}
+            
+              
+                 {% capture genre_name %}{{ genre | first }}{% endcapture %}
+                <li class="tag__item"><a href="#{{ genre_name | slugize }}" class="tag__link">{{ genre_name | slugize }}</a></li>
+               
+              
+                
+                
+              
+            {% endfor %}
+              
+                
+             
+              
+            
+              
+            
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
