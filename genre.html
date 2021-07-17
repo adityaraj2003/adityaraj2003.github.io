@@ -21,8 +21,8 @@ title: Genre
             {% for tag in site.tags %}
             
               
-                 {% capture genre_name %}{{ genre | first }}{% endcapture %}
-                <li class="tag__item"><a href="#{{ genre_name | slugize }}" class="tag__link">{{ genre_name | slugize }}</a></li>
+                 {% capture tag_name %}{{ tag | first }}{% endcapture %}
+                <li class="tag__item"><a href="#{{ tag_name | slugize }}" class="tag__link">{{ tag_name | slugize }}</a></li>
                
               
                 
